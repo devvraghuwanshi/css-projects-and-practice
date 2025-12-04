@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- transform property does not work on inline elements. -->
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            border: 2px solid black;
+            background-color: black;
+            color: white;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* Rotates the element clockwise. Example: rotate(+vedeg) */
+        /* Rotates the element counter clockwise. Example: rotate(-vedeg) */
+        .rotate:hover{
+            transform: rotate(+90deg);
+            /* transform: rotate(-180deg); */
+            transition: 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="rotate">This is an example of ROTATE</div>
+</body>
+</html>
