@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Transition Timing Functions</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .box {
+      width: 100px;
+      height: 40px;
+      background-color: steelblue;
+      transition: transform 2s;
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .label {
+      width: 100px;
+    }
+
+    .linear    { transition-timing-function: linear; }
+    .ease      { transition-timing-function: ease; }
+    .ease-in   { transition-timing-function: ease-in; }
+    .ease-out  { transition-timing-function: ease-out; }
+    .ease-in-out { transition-timing-function: ease-in-out; }
+
+    .container:hover .box {
+      transform: translateX(300px);
+    }
+  </style>
+</head>
+<body>
+
+<h2>Transition Timing Functions</h2>
+<p>Hover anywhere on the page to see all timing functions in action:</p>
+
+<div class="container">
+  <div class="row">
+    <div class="label">linear</div>
+    <div class="box linear"></div>
+  </div>
+  <div class="row">
+    <div class="label">ease</div>
+    <div class="box ease"></div>
+  </div>
+  <div class="row">
+    <div class="label">ease-in</div>
+    <div class="box ease-in"></div>
+  </div>
+  <div class="row">
+    <div class="label">ease-out</div>
+    <div class="box ease-out"></div>
+  </div>
+  <div class="row">
+    <div class="label">ease-in-out</div>
+    <div class="box ease-in-out"></div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* The CSS property you want to animate (e.g., color, transform, background-color) */
+        .box{
+            width: 400px;
+            height: 400px;
+            border: 2px solid black;
+
+            /* transition-property: width; */
+            /* transition-property: width,height,border; */
+            transition-property: all;
+        }
+         .box:hover{
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
