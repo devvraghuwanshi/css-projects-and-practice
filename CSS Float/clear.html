@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* The clear property specifies what should happen with the element that is NEXT to a floating element */
+        div{
+            width: 100%;
+            height: 30vh;
+        }
+        img{
+            width: 200px;
+            height: 200px;
+            float:right ;
+        }
+        .contianer1{
+            float:right;
+        }
+        .container2{
+            clear:right;
+        }
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <img src="images/premium_photo-1661698763470-55da05629e50.jpeg" alt="">
+        
+    </div>
+    <div class="container2">
+        <p>this is image of car</p>
+    </div>
+</body>
+</html>
