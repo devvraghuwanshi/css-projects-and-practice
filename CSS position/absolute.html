@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed). */
+        /* completely removes the element from document flow. */
+        h1{
+            position: absolute;
+        }
+        .absolute{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            /* breaks the flow of document */
+            position: absolute;
+            top: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>hello guys
+    </h1>
+    <div class="absolute"></div>
+</body>
+</html>
