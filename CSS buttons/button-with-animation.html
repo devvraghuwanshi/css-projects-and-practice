@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: black;
+      }
+      .btn1 a{
+        text-decoration: none;
+        color: white;
+      }
+      .btn1 {
+        text-decoration: none;
+        width: 170px;
+        height: 50px;
+        /* margin: 20px; */
+        border: transparent;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: radial-gradient(
+          circle at top left,
+          #000000 0%,
+          #000000 20%,
+          #ff007f 40%,
+          #8e2de2 70%,
+          #ff6a00 100%
+        );
+
+        transition: transform 0.5s ease;
+      }
+      .btn1:hover {
+        box-shadow: 1px 1px 10px white;
+        transform: rotate(-10deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="btn1">
+      <a href="#contact">CONTACT ME</a>
+    </div>
+  </body>
+</html>
