@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .screen-type::before{
+            content: "Laptop screen";
+        }
+        .container{
+            width: 100vw;
+            border: 10px solid black;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .item{
+            border: 2px solid black;
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+            margin: 20px;
+        }
+        @media screen and (max-width:576px){
+            .container{
+                display: flex;
+                flex-direction: column;
+            }
+            .item{
+                width: 300px;
+                height: 100px;
+                background-color: aqua;
+                border: 2px solid black;
+                margin: 20px;
+            }
+            .screen-type::before{
+                content: "Mobile screen";
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="screen-type" style="text-align: center;"></h1>
+    <div class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</body>
+</html>
