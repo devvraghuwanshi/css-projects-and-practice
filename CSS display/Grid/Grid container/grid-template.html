@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid Template Example</title>
+    <style>
+        .grid-container {
+            display: grid;
+            /* grid-template: rows / columns; */
+            /* This shorthand sets both grid-template-rows and grid-template-columns */
+            grid-template: 100px 100px / 1fr 2fr;
+            /* Equivalent to:
+                 grid-template-rows: 100px 100px;
+                 grid-template-columns: 1fr 2fr;
+            */
+            gap: 10px;
+            background: #f0f0f0;
+            padding: 10px;
+        }
+        .grid-item {
+            background: #4CAF50;
+            color: white;
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+    </div>
+</body>
+</html>

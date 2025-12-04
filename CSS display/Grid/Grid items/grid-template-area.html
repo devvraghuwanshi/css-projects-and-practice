@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* The grid-area property can also be used to assign names to grid items. */
+      /* The named grid items can then be referred to by the grid-template-areas property of the grid container. */
+
+      /* The named grid items in each row is defined inside the apostrophes, separated by a space. */
+      /* if you want empty space inside grid you can use '.' */
+      /* A dot means no grid item occupies that cell. */
+      .grid-container {
+        width: 100%;
+        height: 100vh;
+        border: 2px solid transparent;
+        display: grid;
+        gap: 10px 10px;
+        grid-template-areas:
+          'header header header header header header'
+          'menu main main main main right'
+          'menu footer footer footer footer footer';
+      }
+      .item {
+        /* width: 60px;
+        height: 60px; */
+        border: 2px solid transparent;
+        border-radius: 10px;
+        background-color: blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .item1 {
+        grid-area: header;
+      }
+      .item2 {
+        grid-area: menu;
+      }
+      .item3 {
+        grid-area: main;
+      }
+      .item4 {
+        grid-area: right;
+      }
+      .item5 {
+        grid-area: footer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="item item1">Header</div>
+      <div class="item item2">Menu</div>
+      <div class="item item3">Main</div>
+      <div class="item item4">Right</div>
+      <div class="item item5">Footer</div>
+    </div>
+  </body>
+</html>

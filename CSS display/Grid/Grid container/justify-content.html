@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Grid justify-content Example</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-gap: 16px;
+            height: 200px;
+            border: 2px solid #333;
+
+            /* The justify-content property is used to align the grid items when they do not use all available space on the main-axis. */
+            justify-content: center;
+             
+            /* Try: start | end | center | space-between | space-around | space-evenly */
+
+            background: #f9f9f9;
+            padding: 20px 0;
+        }
+        .grid-item {
+            background: #4a90e2;
+            color: #fff;
+            font-size: 1.2em;
+            text-align: center;
+            padding: 24px 0;
+            border-radius: 8px;
+        }
+        .label {
+            margin-bottom: 10px;
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="label">justify-content: center</div>
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+    </div>
+</body>
+</html>

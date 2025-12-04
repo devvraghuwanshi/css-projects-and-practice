@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Grid place-content Example</title>
+    <style>
+        .grid-container {
+            display: grid;
+            height: 300px;
+            width: 300px;
+            background: #f0f0f0;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+
+            /* place-content is a shorthand for align-content and justify-content */
+            place-content: center space-between;
+            /* Equivalent to:
+                 align-content: center;
+                 justify-content: space-between;
+            */
+        }
+        .grid-item {
+            background: #4a90e2;
+            color: #fff;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+    </div>
+</body>
+</html>
