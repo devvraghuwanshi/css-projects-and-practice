@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Image Filter Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            background: #f0f0f0;
+        }
+
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 400px;
+            margin: auto;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            width: 100%;
+            max-width: 350px;
+            display: block;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .slider-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="range"] {
+            width: 100%;
+        }
+
+        .value {
+            float: right;
+            font-size: 0.95em;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img id="myImage"
+            src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
+            alt="Sample Image">
+
+        <div class="slider-group">
+            <label for="brightness">Brightness <span class="value" id="brightnessValue">100%</span></label>
+            <input type="range" id="brightness" min="50" max="200" value="100">
+        </div>
+        <div class="slider-group">
+            <label for="contrast">Contrast <span class="value" id="contrastValue">100%</span></label>
+            <input type="range" id="contrast" min="50" max="200" value="100">
+        </div>
+        <div class="slider-group">
+            <label for="blur">Blur <span class="value" id="blurValue">0px</span></label>
+            <input type="range" id="blur" min="0" max="10" value="0">
+        </div>
+        <div class="slider-group">
+            <label for="grayscale">Grayscale <span class="value" id="grayscaleValue">0%</span></label>
+            <input type="range" id="grayscale" min="0" max="100" value="0">
+        </div>
+    </div>
+
+    <script>
+        const img = document.getElementById('myImage');
+        const brightness = document.getElementById('brightness');
+        const contrast = document.getElementById('contrast');
+        const blur = document.getElementById('blur');
+        const grayscale = document.getElementById('grayscale');
+
+        const brightnessValue = document.getElementById('brightnessValue');
+        const contrastValue = document.getElementById('contrastValue');
+        const blurValue = document.getElementById('blurValue');
+        const grayscaleValue = document.getElementById('grayscaleValue');
+
+        function updateFilter() {
+            const b = brightness.value;
+            const c = contrast.value;
+            const bl = blur.value;
+            const g = grayscale.value;
+
+            img.style.filter = `
+                brightness(${b}%)
+                contrast(${c}%)
+                blur(${bl}px)
+                grayscale(${g}%)
+            `;
+
+            brightnessValue.textContent = `${b}%`;
+            contrastValue.textContent = `${c}%`;
+            blurValue.textContent = `${bl}px`;
+            grayscaleValue.textContent = `${g}%`;
+        }
+
+        brightness.addEventListener('input', updateFilter);
+        contrast.addEventListener('input', updateFilter);
+        blur.addEventListener('input', updateFilter);
+        grayscale.addEventListener('input', updateFilter);
+
+        updateFilter();
+    </script>
+</body>
+
+</html>
