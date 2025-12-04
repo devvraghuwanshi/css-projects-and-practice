@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+/* The four links states are: */
+/* a:link - a normal, unvisited link */
+/* a:visited - a link the user has visited */
+/* a:hover - a link when the user mouses over it */
+/* a:active - a link the moment it is clicked */
+        *{
+            box-sizing: border-box;
+        }
+        .container{
+            width: 300px;
+            height: 200px;
+            border: 2px solid black;
+           
+            padding-left:10px;
+            padding-right: 10px;
+        }
+        .container:hover{
+            background-color: black;
+            color: aliceblue;
+        }
+        a{
+            text-decoration: none;
+            font-size: 200px;
+        }
+        a:link{
+            color: blue;
+        }
+        a:visited{
+            color: black;
+         }
+         a:hover{
+            color: blanchedalmond;
+            background-color: black;
+         }
+         a:active{
+            color: aquamarine;
+         }
+         a:focus{
+            color: blue;
+         }
+        
+    </style>
+</head>
+<body>
+    <a href="">strike</a>
+    <div class="container">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis omnis sed est, corporis deserunt quae molestias quibusdam. Quasi accusamus amet accusantium, deleniti id dicta nulla beatae minima reprehenderit modi expedita quo, pariatur eaque asperiores tenetur animi in. Labore porro quo vitae inventore facere ducimus ipsum, incidunt, asperiores ullam, omnis molestiae.</p>
+    </div>
+</body>
+</html>

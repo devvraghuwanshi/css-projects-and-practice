@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{
+            text-decoration: none;
+        }
+        a:link{
+            color:green;
+            /* targets link that user has not clicked */
+        }
+        a:visited{
+            color: blueviolet;
+            /* targets links that the user has already visited(clicked before) */
+        }
+        a:hover{
+            /* color: black; */
+            background-color: black;
+            font-size: 2em;
+            /* Applies when user hovers the mouse pointer over the link */
+        }
+        a:focus{
+            color: chartreuse;
+            /* link is selected  */
+        } 
+        
+        a:active{
+            color: brown;
+            /* applies when the link is being clicked(pressed but not yet released) */
+        }
+         
+    </style>
+</head>
+<body>
+    <a href="https://www.google.com">google</a>
+</body>
+</html>
