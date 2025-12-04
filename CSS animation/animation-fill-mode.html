@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Controls styles before/after animation (forwards, backwards, both) */
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+            background-color: tomato;
+            animation-name: moveRight;  
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            /* animation-fill-mode: backwards; */
+            /* animation-fill-mode: forwards; */
+            animation-fill-mode: both;
+            
+            
+        }
+        @keyframes moveRight {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(300px);
+      }
+    }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

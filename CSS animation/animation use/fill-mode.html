@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>animation-fill-mode Demo</title>
+  <style>
+    body {
+      font-family:monospace;
+      background-color: #f0f0f0;
+      padding: 30px;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: coral;
+      opacity: 0.5;
+      animation-name: grow;
+      animation-duration: 2s;
+      animation-delay: 2s; /* Delay to show effect clearly */
+      animation-timing-function: ease;
+      animation-iteration-count: 3;
+    }
+
+    /* Different fill modes */
+    .none     { animation-fill-mode: none; }
+    .forwards { animation-fill-mode: forwards; }
+    .backwards{ animation-fill-mode: backwards; }
+    .both     { animation-fill-mode: both; }
+
+    /* Animation keyframes */
+    @keyframes grow {
+      from {
+        width: 100px;
+        background-color: coral;
+        opacity: 0.5;
+      }
+      to {
+        width: 300px;
+        background-color: seagreen;
+        opacity: 1;
+      }
+    }
+
+    label {
+      font-weight: bold;
+      margin-bottom: 5px;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>CSS `animation-fill-mode` Comparison</h2>
+
+  <div class="wrapper">
+
+    <div>
+      <label>fill-mode: <code>none</code></label>
+      <div class="box none"></div>
+    </div>
+
+    <div>
+      <label>fill-mode: <code>forwards</code></label>
+      <div class="box forwards"></div>
+    </div>
+
+    <div>
+      <label>fill-mode: <code>backwards</code></label>
+      <div class="box backwards"></div>
+    </div>
+
+    <div>
+      <label>fill-mode: <code>both</code></label>
+      <div class="box both"></div>
+    </div>
+
+  </div>
+
+</body>
+</html>
