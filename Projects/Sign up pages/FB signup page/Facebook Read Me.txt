@@ -1,0 +1,6 @@
+Blue Color Code : #3b5998
+Light Grey Color Code : #e7ebf2
+Login Button Color Code : #6079AB
+Signup Button Color Code : #69A74E
+
+Font Family : font-family: Tahoma, "Trebuchet MS", sans-serif;

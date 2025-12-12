@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+}
+.Xlogo {
+  position: absolute;
+  top: 220px;
+  left: 250px;
+}
+
+.signup {
+  h1 {
+    font-family: Chirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Helvetica, Arial, sans-serif;
+    color: #e7e9ea;
+  }
+}
+main{
+    position: absolute;
+    left: 600px;
+}
